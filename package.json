@@ -1,0 +1,17 @@
+{
+  "name": "tiny-xml-namespace",
+  "version": "0.1.0",
+  "description": "Maps XML prefixes to namespace URIs using ancestor scope declarations.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
