@@ -39,3 +39,10 @@ Binding a prefix to the empty string is not the same as undeclaring it. In XML 1
 - `resolver.depth` — number of scopes on the stack.
 - `XML_NAMESPACE`, `XMLNS_NAMESPACE` — the reserved namespace URIs.
 - `ReservedPrefixError`, `UnboundPrefixError` — thrown by `push` and `resolve` respectively.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
